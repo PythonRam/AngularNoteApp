@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Note } from '../models/Note';
-import { Observable } from 'rxjs';
+import { Observable, ReplaySubject } from 'rxjs';
 import { NotesResponse } from '../models/NotesResponse';
 import { NoteResponse } from '../models/NoteResponse';
 import { ServerResponse } from '../models/ServerResponse';
@@ -11,6 +11,8 @@ import { ServerResponse } from '../models/ServerResponse';
 })
 export class NoteService {
   private baseUrl = 'http://localhost:3000';
+
+  public databaseChanged: ReplaySubject<boolean> = new ReplaySubject<boolean>();
 
   private options = { headers: new HttpHeaders().set('Content-Type', 'application/json') };
   constructor(private httpClient: HttpClient) { }
@@ -27,6 +29,9 @@ export class NoteService {
   }
   addNote(note: Note): Observable<ServerResponse> {
     return this.httpClient.post<ServerResponse>(this.baseUrl + '/notes', note, this.options);
+  }
+  deleteNote(noteId: number): Observable<ServerResponse> {
+    return this.httpClient.delete<ServerResponse>(this.baseUrl + '/notes/' + noteId, this.options);
   }
 
 }

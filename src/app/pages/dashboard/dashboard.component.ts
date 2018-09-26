@@ -10,9 +10,7 @@ import { NotesResponse } from '../../models/NotesResponse';
 export class DashboardComponent implements OnInit {
 
   constructor(private noteService: NoteService) {
-    this.noteService.getAllNotes().subscribe((notesReponse: NotesResponse) => {
-      console.log(notesReponse);
-    });
+  
   }
 
   ngOnInit() {

@@ -2,3 +2,38 @@
 @import "../node_modules/primeicons/primeicons.css";
 @import "../node_modules/primeng/resources/themes/nova-light/theme.css";
 @import "../node_modules/primeng/resources/primeng.min.css";
+@import "../node_modules/primeflex/primeflex.css";
+
+body,html{
+    margin: 0px;
+}
+
+.main-container{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.main-element{
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.no-padding{
+    padding: 0%;
+}
+.no-margin{
+    margin: 0%;
+}

@@ -1,0 +1,24 @@
+#add-card{
+    background-color: #eee;
+    text-align: center;
+}
+
+#note-text{
+    width: 100%;
+    height: 100%;
+}
+
+#add-note-container{
+    padding: 3%;
+    height: 100%;
+}
+
+#note-text-container{
+    width: 90%;
+    margin: auto;
+    height: 50%;
+}
+
+#addButton{
+    margin-top: 5%;
+}

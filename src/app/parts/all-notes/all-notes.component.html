@@ -1,3 +1,12 @@
-<p>
-  all-notes works!
-</p>
+<div class="note-container main-element">
+  <div class="note-grid">
+    <div *ngFor="let note of notes" class="note">
+      <p-card class="note-card">
+        <p>{{note.note}}</p>
+        <p-footer>
+            <a [routerLink]="[ 'notes', note.id ]">Edit / Delete Note</a>
+        </p-footer>
+      </p-card>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,10 @@
-<p>
-  add-note works!
-</p>
+<div id="add-card" class="card main-element">
+    <div id="add-note-container">
+            <h2>Add new notes</h2>
+            <div id="note-text-container" class="ui-inputgroup">
+                <textarea  id="note-text"  [(ngModel)]="noteValue" placeholder="Type your notes here" pInputTextarea></textarea>
+            </div>
+            <button #addButton id="addButton" pButton type="button" label="Add note" (click)="addNote($event)"></button>
+    </div>
+    <p-toast></p-toast>    
+</div>
