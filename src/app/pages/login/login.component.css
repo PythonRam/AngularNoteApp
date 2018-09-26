@@ -1,0 +1,27 @@
+#main {
+  display: table;
+  background-color: #202124;
+}
+
+.login-container {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.login-card {
+  width: 50%;
+  min-width: 300px;
+  max-width: 400px;
+  padding: 3%;
+  margin: auto;
+  background-color: white;
+}
+
+.login-button-container {
+  text-align: center;
+}
+
+#lgnButton {
+  width: 30%;
+  margin: auto;
+}

@@ -1,3 +1,24 @@
-<p>
-  login works!
-</p>
+<div id="main" class="main-container">
+  <div class="login-container">
+    <div class="card login-card">
+      <div class="ui-g ui-fluid">
+        <div class="ui-g-12 ui-md-12">
+          <div class="ui-inputgroup">
+            <input #username [(ngModel)]="loginForm.username" type="email" pInputText placeholder="Username">
+          </div>
+        </div>
+        <div class="ui-g-12 ui-md-12">
+          <div class="ui-inputgroup">
+            <input #password type="password" [(ngModel)]="loginForm.password" pInputText placeholder="Password">
+          </div>
+        </div>
+        <div class="ui-g-12 ui-md-12">
+          <div class="ui-inputgroup login-button-container">
+            <button #lgnButton id="lgnButton" pButton type="button" label="Login" (click)="login($event)"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p-toast></p-toast>
+</div>
