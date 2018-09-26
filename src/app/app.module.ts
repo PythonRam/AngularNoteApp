@@ -19,6 +19,8 @@ import { AddNoteComponent } from './parts/add-note/add-note.component';
 import { ViewNoteComponent } from './parts/view-note/view-note.component';
 import { NoteService } from './services/note.service';
 import { MessageService } from 'primeng/api';
+import { AuthGuard } from './services/auth.guard';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,7 @@ import { MessageService } from 'primeng/api';
     HttpClientModule,
     CardModule
   ],
-  providers: [NoteService, MessageService],
+  providers: [NoteService, MessageService, AuthGuard, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

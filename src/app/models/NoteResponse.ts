@@ -1,6 +1,6 @@
 import { Note } from './Note';
+import { ServerResponse } from './ServerResponse';
 
-export class NoteResponse {
-    public success: boolean;
+export class NoteResponse extends ServerResponse {
     public notes: Note;
 }
